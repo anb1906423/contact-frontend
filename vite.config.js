@@ -8,6 +8,12 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     port: 3344,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080/',
+        changeOrigin: true,
+      },
+    }
   },
   resolve: {
     alias: {
