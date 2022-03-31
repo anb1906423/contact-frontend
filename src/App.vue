@@ -9,7 +9,7 @@ export default {
 
 <template>
   <div id="app">
-    <AppHeader />
+    <AppHeader.vue />
 
     <div class="container mt-3">
       <router-view />
@@ -21,5 +21,8 @@ export default {
 .page {
   max-width: 400px;
   margin: auto;
+}
+#app {
+  max-width: 100%;
 }
 </style>

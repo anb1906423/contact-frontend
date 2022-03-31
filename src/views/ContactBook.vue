@@ -35,7 +35,8 @@
                 <ContactCard :contact="activeContact" />
                 <router-link
                     :to="{
-                        name: 'contact.edit',
+                        // name: 'contact.edit',
+                        name: 'EditContact',
                         params: { id: activeContact.id },
                     }"
                 >
@@ -119,7 +120,8 @@ export default {
         },
 
         goToAddContact() {
-            this.$router.push({ name: "contact.add" });
+            // this.$router.push({ name: "contact.add" });
+            this.$router.push({ name: "AddContact" });
         },
     },
     mounted() {

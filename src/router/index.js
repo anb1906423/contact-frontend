@@ -4,13 +4,31 @@ import ContactBook from "../views/ContactBook.vue"
 const routes = [
     {
         path: '/',
-        name: 'contactbook',
+        name: 'ContactBook',
         component: ContactBook,
+    },
+    {
+        path: '/contacts-add',
+        name: 'AddContact',
+        component: () => import('../views/ContactAdd.vue'),
+        props: true,
+    },
+    {
+        path: '/contacts/:id',
+        name: 'EditContact',
+        component: () => import('../views/ContactEdit.vue'),
+        props: true,
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        name: 'NotFound',
+        component: () => import('../views/NotFound.vue'),
     },
 ]
 
 const router = createRouter ({
-    history: createwebHistory(import.meta.env.BASE_URL),
+    history: createWebHistory(import.meta.env.BASE_URL),
+    // history: createWebHistory(process.env.BASE_URL),
     routes,
 })
 

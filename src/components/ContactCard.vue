@@ -3,7 +3,7 @@ export default {
     props: {
         contact: { type: Object, required: true },
     },
-}    
+};
 </script>
 
 <template>
@@ -14,7 +14,7 @@ export default {
         </div>
         <div class="p-1">
             <strong>E-mail:</strong>
-            {{ conact.email }}
+            {{ contact.email }}
         </div>
         <div class="p-1">
             <strong>Địa chỉ:</strong>
